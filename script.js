@@ -1,3 +1,14 @@
+// Start fresh visits at the header instead of restoring an old footer position.
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('pageshow', () => {
+  if (!window.location.hash) {
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'auto' }));
+  }
+});
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 const navLinks = [...nav.querySelectorAll('a')];
