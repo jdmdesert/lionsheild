@@ -1,5 +1,6 @@
 const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('.main-nav');
+const navLinks = [...nav.querySelectorAll('a')];
 
 toggle.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
@@ -7,35 +8,29 @@ toggle.addEventListener('click', () => {
   toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 });
 
-nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+navLinks.forEach((link) => link.addEventListener('click', () => {
   nav.classList.remove('open');
   toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-label', 'Open menu');
 }));
 
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-const dialog = document.querySelector('#contact-dialog');
-const contactButton = document.querySelector('#contact-button');
-const closeButton = document.querySelector('.dialog-close');
-const form = document.querySelector('#contact-form');
-const success = document.querySelector('.form-success');
+const sections = [...document.querySelectorAll('main section[id]')];
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
 
-contactButton.addEventListener('click', () => dialog.showModal());
-closeButton.addEventListener('click', () => dialog.close());
-dialog.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
-});
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  form.hidden = true;
-  success.hidden = false;
-});
+sections.forEach((section) => sectionObserver.observe(section));

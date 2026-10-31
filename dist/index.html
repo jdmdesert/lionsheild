@@ -3,167 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171914">
-  <meta name="description" content="Lion Shield brings clarity, readiness, and resilient protection to modern organizations.">
-  <title>Lion Shield — Protection with purpose</title>
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Lion Shield Barbershop — classic cuts, modern styles, and friendly faces.">
+  <title>Lion Shield Barbershop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Lion Shield home">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M32 4 54 12v17c0 15-9.1 25.3-22 31C19.1 54.3 10 44 10 29V12L32 4Z"/>
-        <path d="m23 23 5-5 4 3 4-3 5 5-3 4 2 10-8 6-8-6 2-10-3-4Z"/>
-        <path d="M27 28h10M28 34l4 3 4-3"/>
+    <a class="brand" href="#home" aria-label="Lion Shield Barbershop home">
+      <svg class="crest" viewBox="0 0 72 86" aria-hidden="true">
+        <path class="crest-crown" d="m15 19 2-13 10 8 9-12 9 12 10-8 2 13-8 5H23l-8-5Z"/>
+        <path class="crest-shield" d="M8 21h56v25c0 17-11 29-28 38C19 75 8 63 8 46V21Z"/>
+        <path class="crest-face" d="m19 33 9-8 8 5 8-5 9 8-5 8 3 17-15 15-15-15 3-17-5-8Zm9 10 8 4 8-4-4 10-4 3-4-3-4-10Zm3 16 5 4 5-4"/>
       </svg>
-      <span>Lion Shield</span>
+      <span class="brand-type"><strong>Lion Shield</strong><small><i></i> Barbershop <i></i></small></span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#approach">Approach</a>
+
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#principles">Principles</a>
-      <a class="nav-cta" href="#contact">Talk to us <span>↗</span></a>
+      <a href="#barbers">Our Barbers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
+
+    <div class="socials" aria-label="Social platforms">
+      <span aria-label="Instagram">◎</span>
+      <span aria-label="Facebook">f</span>
+      <span aria-label="TikTok">♪</span>
+      <span aria-label="YouTube">▶</span>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> Built for what’s ahead</p>
-        <h1 id="hero-title">Stand ready.<br><em>Stay resilient.</em></h1>
-        <p class="hero-intro">Lion Shield turns complex risk into decisive action—helping organizations protect what matters and move forward with confidence.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Start a conversation <span>↗</span></a>
-          <a class="text-link" href="#approach">Discover our approach <span>↓</span></a>
-        </div>
-      </div>
-
-      <div class="hero-emblem reveal" aria-label="Lion Shield crest illustration">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <svg viewBox="0 0 420 500" role="img" aria-labelledby="crest-title crest-desc">
-          <title id="crest-title">Lion Shield crest</title>
-          <desc id="crest-desc">A geometric lion face within a protective shield.</desc>
-          <path class="crest-shield" d="M210 24 374 82v128c0 116-67 205-164 264C113 415 46 326 46 210V82L210 24Z"/>
-          <path class="crest-inner" d="M210 55 345 103v106c0 95-53 170-135 224-82-54-135-129-135-224V103L210 55Z"/>
-          <g class="lion-lines">
-            <path d="m125 156 50-51 35 27 35-27 50 51-23 35 17 102-59 65-59-65 17-102-23-35Z"/>
-            <path d="m150 166 44 27h32l44-27-25 80-35 27-35-27-25-80Z"/>
-            <path d="m175 214 35 13 35-13M185 280l25 20 25-20M210 227v73"/>
-          </g>
-        </svg>
-        <div class="emblem-tag tag-top"><span>01</span> Anticipate</div>
-        <div class="emblem-tag tag-bottom"><span>03</span> Endure</div>
-      </div>
-      <div class="scroll-note" aria-hidden="true">Scroll to explore <span></span></div>
-    </section>
-
-    <section class="statement" id="approach">
-      <div class="section-number">01 / Approach</div>
-      <div class="statement-copy reveal">
-        <p class="kicker">Protection should create momentum.</p>
-        <h2>Security isn’t a wall.<br>It’s the confidence to <em>move.</em></h2>
-        <p>We bring structure to uncertainty. By connecting insight, preparation, and response, Lion Shield helps teams make better decisions before pressure arrives.</p>
-      </div>
-      <div class="approach-grid">
-        <article class="approach-card reveal">
-          <span class="card-index">01</span>
-          <div class="card-icon radar" aria-hidden="true"><i></i><b></b></div>
-          <h3>See clearly</h3>
-          <p>Understand your exposure, priorities, and path forward without the noise.</p>
-        </article>
-        <article class="approach-card reveal">
-          <span class="card-index">02</span>
-          <div class="card-icon rings" aria-hidden="true"><i></i><b></b></div>
-          <h3>Prepare deliberately</h3>
-          <p>Build practical safeguards and plans that work with your people and operations.</p>
-        </article>
-        <article class="approach-card reveal">
-          <span class="card-index">03</span>
-          <div class="card-icon pulse" aria-hidden="true"><i></i></div>
-          <h3>Respond decisively</h3>
-          <p>Move with calm, coordinated action when every moment and decision counts.</p>
-        </article>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="overline">Lion Shield Barbershop <span class="stripe"><i></i><i></i></span></div>
+        <h1 id="hero-title">Your Neighborhood<br>Barbershop</h1>
+        <p>Classic cuts. Modern styles. Friendly faces.</p>
+        <a class="outline-button" href="#services">Our Services <span>↓</span></a>
       </div>
     </section>
 
-    <section class="services" id="services">
-      <div class="section-number light">02 / Services</div>
-      <div class="services-head reveal">
-        <p class="eyebrow"><span></span> Where we focus</p>
-        <h2>Readiness for the<br><em>real world.</em></h2>
-        <p>Focused support for the moments that define resilience—from understanding risk to navigating disruption.</p>
+    <section class="quick-services" aria-label="Featured services">
+      <article>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="m14 13 36 38M50 13 14 51M13 12c-5 5-4 12 2 14 5 2 10-2 10-7M51 12c5 5 4 12-2 14-5 2-10-2-10-7"/><circle cx="12" cy="51" r="7"/><circle cx="52" cy="51" r="7"/></svg>
+        <div><h2>Haircuts</h2><p>Classic &amp; modern</p></div>
+      </article>
+      <article>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 14c2 17 9 38 20 42 11-4 18-25 20-42-7 11-13 4-20 12-7-8-13-1-20-12Z"/><path d="M20 22c2 9 7 10 12 3 5 7 10 6 12-3M32 25v20"/></svg>
+        <div><h2>Beard Trims</h2><p>Shape &amp; maintain</p></div>
+      </article>
+      <article>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="18" r="9"/><circle cx="12" cy="23" r="7"/><circle cx="52" cy="23" r="7"/><path d="M17 51v-7c0-9 6-15 15-15s15 6 15 15v7H17ZM1 49v-5c0-7 4-12 11-12 3 0 6 1 8 4M63 49v-5c0-7-4-12-11-12-3 0-6 1-8 4"/></svg>
+        <div><h2>Our Barbers</h2><p>Experienced &amp; friendly</p></div>
+      </article>
+    </section>
+
+    <section class="intro section" id="services">
+      <div class="section-label">01 — What we do</div>
+      <div class="intro-copy reveal">
+        <p class="eyebrow">Good grooming. No pretense.</p>
+        <h2>Sharp work for<br><em>everyday people.</em></h2>
+        <p class="lede">Lion Shield is built around the neighborhood barbershop experience: skilled hands, honest conversation, and a cut that feels like you.</p>
       </div>
-      <div class="service-list">
-        <article class="service-row reveal">
-          <span>01</span><h3>Risk clarity</h3><p>Turn a complex landscape into a clear, prioritized view of what deserves attention now.</p><i>↗</i>
-        </article>
-        <article class="service-row reveal">
-          <span>02</span><h3>Resilience planning</h3><p>Design practical plans, roles, and safeguards that strengthen day-to-day readiness.</p><i>↗</i>
-        </article>
-        <article class="service-row reveal">
-          <span>03</span><h3>Response support</h3><p>Bring structure and pace to critical moments with coordinated, grounded guidance.</p><i>↗</i>
-        </article>
+
+      <div class="service-grid">
+        <article class="service-card reveal"><span>01</span><h3>Classic Haircut</h3><p>A clean, tailored cut finished with careful detail and styling.</p></article>
+        <article class="service-card reveal"><span>02</span><h3>Skin Fade</h3><p>Precise blending from skin to length for a crisp, modern finish.</p></article>
+        <article class="service-card reveal"><span>03</span><h3>Beard Trim</h3><p>Shape, line work, and balanced length for a well-kept beard.</p></article>
+        <article class="service-card reveal"><span>04</span><h3>Kids’ Cut</h3><p>A patient, comfortable experience and an age-appropriate style.</p></article>
       </div>
     </section>
 
-    <section class="principles" id="principles">
-      <div class="section-number">03 / Principles</div>
-      <div class="principle-layout">
-        <div class="principle-mark reveal" aria-hidden="true">
-          <svg viewBox="0 0 280 330"><path d="M140 12 258 54v92c0 84-48 148-118 190C70 294 22 230 22 146V54L140 12Z"/><path d="m83 111 37-38 20 17 20-17 37 38-18 25 13 73-52 53-52-53 13-73-18-25Z"/></svg>
-        </div>
-        <div class="principle-copy reveal">
-          <p class="kicker">The Lion Shield standard</p>
-          <h2>Calm in complexity.<br><em>Courage in action.</em></h2>
-          <p>Our work is guided by three enduring principles: see the whole picture, speak with clarity, and build for lasting strength.</p>
-          <div class="principle-tags"><span>Clarity</span><span>Resolve</span><span>Stewardship</span></div>
-        </div>
+    <section class="craft" id="barbers">
+      <div class="craft-image reveal"><img src="assets/barber-at-work.png" alt="A barber carefully finishing a fade haircut"></div>
+      <div class="craft-copy reveal">
+        <p class="eyebrow light">Our barbers</p>
+        <h2>Craft you can see.<br><em>Comfort you can feel.</em></h2>
+        <p>We believe the best barbers know when to listen, when to guide, and how to make the details count. Every visit is grounded in care, consistency, and respect for your style.</p>
+        <div class="craft-values"><span>Precision</span><span>Conversation</span><span>Community</span></div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-label">02 — Inside the shop</div>
+      <div class="gallery-head reveal"><div><p class="eyebrow">The Lion Shield experience</p><h2>A chair, a craft,<br><em>a fresh start.</em></h2></div><p>Warm welcomes, thoughtful details, and classic barbershop energy—made for the neighborhood we serve.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-large reveal"><img src="assets/hero-barbershop.png" alt="Black leather barber chair inside a warm modern barbershop"><figcaption>The shop</figcaption></figure>
+        <figure class="gallery-tall reveal"><img src="assets/barber-at-work.png" alt="Barber creating a precise fade haircut"><figcaption>The craft</figcaption></figure>
+        <figure class="gallery-detail reveal"><img src="assets/hero-barbershop.png" alt="Warm barbershop mirrors and lighting"><figcaption>The details</figcaption></figure>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <p class="eyebrow"><span></span> Your next move</p>
-        <h2>Ready begins<br>with a <em>conversation.</em></h2>
-        <p>Tell us what you’re navigating. We’ll help you find the clearest path forward.</p>
-        <button class="button button-light" type="button" id="contact-button">Start a conversation <span>↗</span></button>
+      <div class="contact-copy reveal">
+        <p class="eyebrow light">Come say hello</p>
+        <h2>Your neighborhood chair<br>is <em>waiting.</em></h2>
+        <p>This site is informational only. Shop address, hours, phone number, and official social links can be added here once confirmed.</p>
       </div>
-      <div class="contact-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="contact-details reveal">
+        <div><span>Location</span><strong>Shop address coming soon</strong></div>
+        <div><span>Hours</span><strong>Business hours coming soon</strong></div>
+        <div><span>Contact</span><strong>Phone and email coming soon</strong></div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <a class="brand footer-brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4 54 12v17c0 15-9.1 25.3-22 31C19.1 54.3 10 44 10 29V12L32 4Z"/><path d="m23 23 5-5 4 3 4-3 5 5-3 4 2 10-8 6-8-6 2-10-3-4Z"/><path d="M27 28h10M28 34l4 3 4-3"/></svg>
-      <span>Lion Shield</span>
+    <a class="brand footer-brand" href="#home">
+      <svg class="crest" viewBox="0 0 72 86" aria-hidden="true"><path class="crest-crown" d="m15 19 2-13 10 8 9-12 9 12 10-8 2 13-8 5H23l-8-5Z"/><path class="crest-shield" d="M8 21h56v25c0 17-11 29-28 38C19 75 8 63 8 46V21Z"/><path class="crest-face" d="m19 33 9-8 8 5 8-5 9 8-5 8 3 17-15 15-15-15 3-17-5-8Zm9 10 8 4 8-4-4 10-4 3-4-3-4-10Zm3 16 5 4 5-4"/></svg>
+      <span class="brand-type"><strong>Lion Shield</strong><small><i></i> Barbershop <i></i></small></span>
     </a>
-    <p>Protection with purpose.</p>
-    <a href="#top">Back to top ↑</a>
+    <p>Classic cuts. Modern styles. Friendly faces.</p>
+    <a href="#home">Back to top ↑</a>
   </footer>
-
-  <dialog id="contact-dialog">
-    <button class="dialog-close" type="button" aria-label="Close">×</button>
-    <p class="eyebrow"><span></span> Start a conversation</p>
-    <h2>What are you<br><em>navigating?</em></h2>
-    <form id="contact-form">
-      <label>Name<input name="name" autocomplete="name" required></label>
-      <label>Email<input name="email" type="email" autocomplete="email" required></label>
-      <label>How can we help?<textarea name="message" rows="4" required></textarea></label>
-      <button class="button button-primary" type="submit">Prepare message <span>↗</span></button>
-      <p class="form-note">This preview keeps your information on your device.</p>
-    </form>
-    <div class="form-success" hidden>
-      <span>✓</span><h3>Your brief is ready.</h3><p>Thanks. Contact delivery can be connected when your preferred inbox is confirmed.</p>
-    </div>
-  </dialog>
   <script src="script.js"></script>
 </body>
 </html>
