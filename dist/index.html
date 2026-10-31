@@ -4,6 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
+  <script>
+    // Disable browser scroll restoration before the document starts laying out.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const startAtPageTop = () => window.scrollTo(0, 0);
+    startAtPageTop();
+    document.addEventListener('DOMContentLoaded', startAtPageTop, { once: true });
+    window.addEventListener('load', () => {
+      startAtPageTop();
+      window.requestAnimationFrame(startAtPageTop);
+    }, { once: true });
+    window.addEventListener('pageshow', startAtPageTop);
+  </script>
   <meta name="description" content="Lion Shield Barbershop — classic cuts, modern styles, and friendly faces.">
   <title>Lion Shield Barbershop</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -129,6 +141,6 @@
     <p>Classic cuts. Modern styles. Friendly faces.</p>
     <a href="#home">Back to top ↑</a>
   </footer>
-  <script src="script.js?v=20261031-2"></script>
+  <script src="script.js?v=20261031-3"></script>
 </body>
 </html>
