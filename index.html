@@ -5,16 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <script>
-    // Disable browser scroll restoration before the document starts laying out.
+    // Keep initial navigation at the header while the browser finishes layout.
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-    const startAtPageTop = () => window.scrollTo(0, 0);
-    startAtPageTop();
-    document.addEventListener('DOMContentLoaded', startAtPageTop, { once: true });
-    window.addEventListener('load', () => {
-      startAtPageTop();
-      window.requestAnimationFrame(startAtPageTop);
-    }, { once: true });
-    window.addEventListener('pageshow', startAtPageTop);
+    document.documentElement.style.scrollBehavior = 'auto';
+    if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
+
+    let holdInitialPosition = true;
+    const releaseInitialPosition = () => { holdInitialPosition = false; };
+    const pinToHeader = () => {
+      if (holdInitialPosition) window.scrollTo(0, 0);
+    };
+
+    ['wheel', 'touchstart', 'pointerdown', 'keydown'].forEach((eventName) => {
+      window.addEventListener(eventName, releaseInitialPosition, { once: true, passive: true });
+    });
+
+    const holdUntilLayoutSettles = () => {
+      const stopAt = performance.now() + 1500;
+      const frame = () => {
+        pinToHeader();
+        if (holdInitialPosition && performance.now() < stopAt) window.requestAnimationFrame(frame);
+      };
+      window.requestAnimationFrame(frame);
+    };
+
+    pinToHeader();
+    document.addEventListener('DOMContentLoaded', pinToHeader, { once: true });
+    window.addEventListener('load', holdUntilLayoutSettles, { once: true });
+    window.addEventListener('pageshow', holdUntilLayoutSettles);
   </script>
   <meta name="description" content="Lion Shield Barbershop — classic cuts, modern styles, and friendly faces.">
   <title>Lion Shield Barbershop</title>
